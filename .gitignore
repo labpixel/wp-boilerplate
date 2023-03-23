@@ -1,0 +1,9 @@
+.env
+/src/.env
+docker-compose.override.yml
+/src/vendor
+
+# Ignorar a pasta em que é instalado o wordpress porem é necessario depois adicionar as pastas customizadas para serem versionadas.
+src/web/*
+!src/web/.keep
+/src/composer.lock
