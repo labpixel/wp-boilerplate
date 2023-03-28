@@ -3,7 +3,7 @@ services:
   php-fpm:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: docker/Dockerfile
     restart: unless-stopped
     volumes:
       - ./src/:/var/www/html/:cached
@@ -22,7 +22,7 @@ services:
   nginx:
     build:
       context: .
-      dockerfile: Dockerfile.nginx
+      dockerfile: docker/Dockerfile.nginx
     volumes:
       - ./src/:/var/www/html/:cached
 
