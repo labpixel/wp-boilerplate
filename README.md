@@ -31,3 +31,37 @@ Exemplo:
 - Acesse o projeto no seu navegador
 
 Digite `make help` para mais comandos
+
+## Como alterar os hosts
+
+Como fazer a alteração dos hosts no WSL e no Windows
+
+**WSL**: 
+- No terminal utilize o comando ``sudo nano /etc/hosts``
+- Adicione os hosts da seguinte forma:
+```
+127.0.0.1 example.test
+::1 example.test localhost
+```
+- Troque a opção ``example.test`` pelo endereço do seu site
+- Salve o arquivo
+
+**Windows**:
+- Procure por bloco de notas/notepad no menu iniciar do Windows e acesse o mesmo como administrador
+- Vá em ``arquivo/file``, clique em ``abrir/open`` 
+- Navegue pelo seguinte caminho ``Windows/System32/drivers/etc/``
+- No canto inferior direito troque a opção ``documentos de texto`` para ``todos os arquivos``
+- Selecione o arquivo ``hosts``
+- Adicione os hosts da seguinte forma:
+```
+127.0.0.1 example.test
+::1 example.test localhost
+```
+- Troque a opção ``example.test`` pelo endereço do seu site
+- Salve o documento
+- Caso ele salve o arquivo ``hosts`` no formato .txt, acesse o diretorio onde o mesmo se encontra pelo explorador de arquivos do windows
+- Clique em exibir na parte superior e marque a opção ``Extensão de nomes de arquivos``
+- Altere o nome do arquivo ``hosts`` para ``hosts.bkp``
+- Altere o arquivo ``hosts.txt`` para ``hosts``
+- Nisso você terá o arquivo de backup do hosts original e o que foi editado no bloco de notas será o padrão do sistema
+
